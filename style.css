@@ -1,0 +1,538 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+
+body{
+
+    height:100vh;
+    overflow:hidden;
+
+    background:#00030a;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200%;
+    height:200%;
+
+
+    background:
+    radial-gradient(circle,#008cff55 1px,transparent 1px);
+
+
+    background-size:40px 40px;
+
+
+    animation:bgmove 8s linear infinite;
+
+}
+
+
+
+@keyframes bgmove{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(-100px,-100px);
+    }
+
+}
+
+
+
+
+.container{
+
+    position:relative;
+
+    width:90%;
+
+    max-width:650px;
+
+
+    max-height:90vh;
+
+    overflow:auto;
+
+
+    padding:30px;
+
+
+    background:#000b18;
+
+
+    border:2px solid #008cff;
+
+
+    border-radius:20px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 0 20px #008cff,
+
+    inset 0 0 30px #008cff55;
+
+
+    animation:open 1.5s ease;
+
+}
+
+
+
+
+@keyframes open{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.5);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+.profile{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.profile img{
+
+
+    width:130px;
+
+    height:130px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    border:3px solid #008cff;
+
+
+    box-shadow:
+
+    0 0 15px #008cff,
+
+    0 0 40px #008cff;
+
+
+    animation:foto 2s infinite;
+
+}
+
+
+
+
+
+@keyframes foto{
+
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+
+
+
+.logo{
+
+
+    font-size:42px;
+
+
+    font-weight:900;
+
+
+    letter-spacing:6px;
+
+
+    color:#008cff;
+
+
+    animation:glitch 1s infinite;
+
+
+}
+
+
+
+
+
+@keyframes glitch{
+
+
+    0%,100%{
+
+        text-shadow:3px 0 white;
+
+    }
+
+
+    50%{
+
+        text-shadow:-3px 0 #008cff;
+
+    }
+
+}
+
+
+
+
+.line{
+
+
+    height:2px;
+
+
+    background:#008cff;
+
+
+    margin:20px 0;
+
+
+    animation:scan 2s infinite;
+
+}
+
+
+
+
+
+@keyframes scan{
+
+
+    0%{
+
+        transform:scaleX(0);
+
+    }
+
+
+    50%{
+
+        transform:scaleX(1);
+
+    }
+
+
+    100%{
+
+        transform:scaleX(0);
+
+    }
+
+}
+
+
+
+
+.text{
+
+
+    font-size:16px;
+
+
+    line-height:1.8;
+
+}
+
+
+
+
+.status{
+
+
+    margin-top:25px;
+
+
+    padding:15px;
+
+
+    background:#000510;
+
+
+    border:1px solid #008cff;
+
+
+    border-radius:12px;
+
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+
+.dot{
+
+
+    display:inline-block;
+
+
+    width:12px;
+
+
+    height:12px;
+
+
+    background:#00ff66;
+
+
+    border-radius:50%;
+
+
+    margin-right:8px;
+
+
+    box-shadow:0 0 15px #00ff66;
+
+
+    animation:blink 1s infinite;
+
+}
+
+
+
+
+
+.warning{
+
+
+    margin-top:20px;
+
+
+    padding:15px;
+
+
+    background:#001020;
+
+
+    border:1px solid #008cff;
+
+
+    border-radius:12px;
+
+
+    color:#66ccff;
+
+
+    font-size:14px;
+
+
+    line-height:1.8;
+
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+
+
+.download{
+
+
+    display:inline-block;
+
+
+    margin-top:25px;
+
+
+    padding:15px 45px;
+
+
+    background:#008cff;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:bold;
+
+
+    border-radius:12px;
+
+
+    border:2px solid white;
+
+
+    letter-spacing:2px;
+
+
+    animation:button 1.5s infinite;
+
+
+    transition:.3s;
+
+}
+
+
+
+
+.download:hover{
+
+
+    background:white;
+
+
+    color:#008cff;
+
+
+    transform:scale(1.1);
+
+
+}
+
+
+
+
+
+@keyframes button{
+
+
+    0%,100%{
+
+
+        box-shadow:0 0 10px #008cff;
+
+
+    }
+
+
+    50%{
+
+
+        box-shadow:0 0 35px #008cff;
+
+
+    }
+
+}
+
+
+
+
+@keyframes pulse{
+
+
+    0%,100%{
+
+
+        box-shadow:0 0 5px #008cff;
+
+
+    }
+
+
+    50%{
+
+
+        box-shadow:0 0 25px #008cff;
+
+
+    }
+
+}
+
+
+
+
+
+.loading{
+
+
+    margin-top:20px;
+
+
+    color:#008cff;
+
+
+    animation:blink 1s infinite;
+
+}
+
+
+
+
+
+@keyframes blink{
+
+
+    50%{
+
+
+        opacity:.3;
+
+
+    }
+
+}
